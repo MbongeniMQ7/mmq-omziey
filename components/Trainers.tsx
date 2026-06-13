@@ -4,13 +4,12 @@ import { Star, ArrowRight } from 'lucide-react';
 const omziey = {
   name: 'Omziey',
   specialty: 'Personal Trainer & Coach',
-  experience: '8 Years',
+  experience: '2 Years',
   rating: '5.0/5',
   bio: 'Your transformation starts here. Omziey blends science-backed programming with real-world accountability to deliver results that actually stick — from strength gains to full lifestyle shifts.',
   certifications: ['CSCS', 'Precision Nutrition L2', 'FMS Certified'],
   instagram: 'https://www.instagram.com/omziey/',
-  // Replace with actual image path once provided, e.g. '/omziey.jpg'
-  image: null as string | null,
+  image: '/omziey.jpeg' as string | null,
 };
 
 export default function Trainers() {
@@ -66,8 +65,24 @@ export default function Trainers() {
               {omziey.specialty}
             </p>
             <p className="text-xs text-textMuted font-mono uppercase tracking-wider mb-6">
-              {omziey.experience} Experience
+              {omziey.experience} Active Coaching
             </p>
+
+            {/* Quick Stats */}
+            <div className="flex flex-wrap gap-4 justify-center md:justify-start mb-6">
+              <div className="flex flex-col items-center md:items-start bg-white border border-customBorder rounded-xl px-5 py-3">
+                <span className="text-2xl font-display font-bold text-accent">8+</span>
+                <span className="text-[10px] font-mono uppercase text-textMuted tracking-wider">Clients</span>
+              </div>
+              <div className="flex flex-col items-center md:items-start bg-white border border-customBorder rounded-xl px-5 py-3">
+                <span className="text-2xl font-display font-bold text-accent">2</span>
+                <span className="text-[10px] font-mono uppercase text-textMuted tracking-wider">Years Coaching</span>
+              </div>
+              <div className="flex flex-col items-center md:items-start bg-white border border-customBorder rounded-xl px-5 py-3">
+                <span className="text-2xl font-display font-bold text-accent">1</span>
+                <span className="text-[10px] font-mono uppercase text-textMuted tracking-wider">Location</span>
+              </div>
+            </div>
 
             <div className="h-px w-full bg-customBorder mb-6" />
 

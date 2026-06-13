@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Dumbbell, Apple, Brain, CheckCircle, Activity, Zap, TrendingUp } from 'lucide-react';
+import { Dumbbell, Apple, Brain } from 'lucide-react';
 import { motion } from 'motion/react';
 
 export default function About() {
@@ -50,7 +50,7 @@ export default function About() {
     }
   ];
 
-  const currentTabInfo = pillars.find(p => p.id === activeTab) || pillars[0];
+  const currentPillar = pillars.find(p => p.id === activeTab) || pillars[0];
 
   return (
     <section id="about" className="py-24 md:py-32 bg-primary relative overflow-hidden border-b border-customBorder">
