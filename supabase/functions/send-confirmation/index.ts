@@ -38,14 +38,14 @@ Deno.serve(async (req) => {
     // 2. Fetch brochure PDF and encode as base64 for attachment
     let brochureAttachment: { filename: string; content: string } | null = null;
     try {
-      const pdfRes = await fetch("https://remix-flexi.vercel.app/Flexi_TriFold_Brochure_v2.pdf");
+      const pdfRes = await fetch("https://remix-flexi.vercel.app/Flexi_Brochure_Book_v3.pdf");
       if (pdfRes.ok) {
         const pdfBuffer = await pdfRes.arrayBuffer();
         const uint8 = new Uint8Array(pdfBuffer);
         let binary = "";
         for (let i = 0; i < uint8.length; i++) binary += String.fromCharCode(uint8[i]);
         brochureAttachment = {
-          filename: "Flexi_TriFold_Brochure.pdf",
+          filename: "Flexi_Brochure_Book_v3.pdf",
           content: btoa(binary),
         };
       }
