@@ -66,7 +66,16 @@ export default function Programs() {
 
   return (
     <section id="programs" className="py-24 md:py-32 bg-primary relative border-b border-customBorder select-none">
-      {/* Absolute Decorative elements */}
+      {/* Background video */}
+      <video
+        autoPlay
+        loop
+        muted
+        playsInline
+        className="absolute inset-0 w-full h-full object-cover opacity-20 pointer-events-none"
+        src="/gym2.mp4"
+      />
+      {/* Absolute Decorative elements */}}
       <div className="absolute right-10 top-1/4 w-72 h-72 rounded-full bg-accent/5 filter blur-3xl pointer-events-none" />
       <div className="absolute left-10 bottom-1/4 w-72 h-72 rounded-full bg-accent/3 filter blur-3xl pointer-events-none" />
 

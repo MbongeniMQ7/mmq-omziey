@@ -54,7 +54,16 @@ export default function About() {
 
   return (
     <section id="about" className="py-24 md:py-32 bg-primary relative overflow-hidden border-b border-customBorder">
-      {/* Background grids */}
+      {/* Background video */}
+      <video
+        autoPlay
+        loop
+        muted
+        playsInline
+        className="absolute inset-0 w-full h-full object-cover opacity-20 pointer-events-none"
+        src="/why.mp4"
+      />
+      {/* Background grids */}}
       <div className="absolute inset-0 z-0 pointer-events-none opacity-5">
         <svg className="w-full h-full" xmlns="http://www.w3.org/2000/svg">
           <pattern id="about-grid" width="60" height="60" patternUnits="userSpaceOnUse">

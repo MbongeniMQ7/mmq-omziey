@@ -25,7 +25,7 @@ export default function App() {
     }
     return {
       enabled: true,
-      heroVideoUrl: '/fexi.mp4',
+      heroVideoUrl: '/7.mp4',
       aboutVideoUrl: '/back.mp4',
       programsVideoUrl: '/gym.mp4',
       heroOpacity: 0.55

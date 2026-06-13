@@ -15,7 +15,7 @@ interface VideoBackgroundControlsProps {
 }
 
 const PRESET_VIDEOS = {
-  flexibility: '/fexi.mp4',
+  flexibility: '/7.mp4',
   strength: '/gym.mp4',
   cardio: '/back.mp4'
 };

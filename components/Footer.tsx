@@ -131,6 +131,27 @@ export default function Footer({ onNavClick }: FooterProps) {
         </div>
 
       </div>
+
+      {/* Cinematic video strip */}
+      <div className="relative mt-12 h-48 md:h-64 overflow-hidden rounded-2xl mx-6 md:mx-12">
+        <video
+          autoPlay
+          loop
+          muted
+          playsInline
+          className="absolute inset-0 w-full h-full object-cover"
+          src="/gym3.mp4"
+        />
+        <div className="absolute inset-0 bg-black/40 flex items-center justify-center">
+          <p
+            className="text-white text-2xl md:text-4xl font-display font-bold uppercase tracking-widest text-center px-4"
+            style={{ textShadow: '0 2px 16px rgba(0,0,0,0.8)' }}
+          >
+            Your Best Self Starts Now
+          </p>
+        </div>
+      </div>
+
     </footer>
   );
 }

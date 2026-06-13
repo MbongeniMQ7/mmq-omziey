@@ -10,7 +10,7 @@ interface HeroProps {
 }
 
 export default function Hero({ onNavClick, videoUrl, videoEnabled, videoOpacity = 0.55 }: HeroProps) {
-  const [currentVideoSrc, setCurrentVideoSrc] = useState(videoUrl || '/fexi.mp4');
+  const [currentVideoSrc, setCurrentVideoSrc] = useState(videoUrl || '/7.mp4');
 
   useEffect(() => {
     if (videoUrl) {
@@ -19,7 +19,7 @@ export default function Hero({ onNavClick, videoUrl, videoEnabled, videoOpacity 
   }, [videoUrl]);
 
   const handleVideoError = () => {
-    if (currentVideoSrc === '/fexi.mp4') {
+    if (currentVideoSrc === '/7.mp4') {
       setCurrentVideoSrc('https://assets.mixkit.co/videos/preview/mixkit-young-woman-doing-stretching-exercises-on-a-gym-mat-40157-large.mp4');
     }
   };
