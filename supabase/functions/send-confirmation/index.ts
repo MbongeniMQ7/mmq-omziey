@@ -45,40 +45,145 @@ Deno.serve(async (req) => {
       body: JSON.stringify({
         from: "Flexi <onboarding@resend.dev>",
         to: [email],
-        subject: "We received your application — Flexi Fitness",
+        subject: `${name}, your Flexi application is confirmed ✓`,
         html: `
-          <div style="font-family: 'Helvetica Neue', sans-serif; max-width: 560px; margin: 0 auto; background: #FAF5FA; padding: 40px 32px; border-radius: 16px;">
-            <h1 style="font-size: 28px; font-weight: 800; text-transform: uppercase; color: #191417; margin-bottom: 4px; letter-spacing: 1px;">
-              FLEXI
-            </h1>
-            <p style="font-size: 11px; color: #E12E99; text-transform: uppercase; letter-spacing: 3px; margin-bottom: 32px;">Train Smarter. Move Better. Live Longer.</p>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Flexi Confirmation</title>
+</head>
+<body style="margin:0;padding:0;background:#f0e8f0;font-family:'Helvetica Neue',Arial,sans-serif;">
 
-            <h2 style="font-size: 22px; font-weight: 700; color: #191417; margin-bottom: 12px;">
-              Hey ${name}, you're in! 🎉
-            </h2>
-            <p style="color: #756C73; font-size: 15px; line-height: 1.7; margin-bottom: 24px;">
-              We've received your application for <strong style="color: #191417;">${goal}</strong>. 
-              Omziey will personally review your goals and reach out within <strong style="color: #E12E99;">24 hours</strong> to schedule your free consultation.
-            </p>
+  <!-- Outer wrapper -->
+  <table width="100%" cellpadding="0" cellspacing="0" style="background:#f0e8f0;padding:40px 16px;">
+    <tr>
+      <td align="center">
+        <table width="560" cellpadding="0" cellspacing="0" style="max-width:560px;width:100%;">
 
-            <div style="background: #fff; border: 1px solid rgba(25,20,23,0.08); border-radius: 12px; padding: 20px; margin-bottom: 28px;">
-              <p style="font-size: 10px; text-transform: uppercase; letter-spacing: 2px; color: #756C73; margin: 0 0 12px;">Your Application Summary</p>
-              <table style="width: 100%; font-size: 13px; color: #191417; border-collapse: collapse;">
-                <tr><td style="padding: 6px 0; color: #756C73;">Name</td><td style="text-align: right; font-weight: 600;">${name}</td></tr>
-                <tr><td style="padding: 6px 0; color: #756C73; border-top: 1px solid rgba(25,20,23,0.06);">Goal</td><td style="text-align: right; font-weight: 600; color: #E12E99;">${goal}</td></tr>
-                <tr><td style="padding: 6px 0; color: #756C73; border-top: 1px solid rgba(25,20,23,0.06);">Phone</td><td style="text-align: right; font-weight: 600;">${phone || "—"}</td></tr>
+          <!-- Header bar -->
+          <tr>
+            <td style="background:#191417;border-radius:16px 16px 0 0;padding:32px 40px;">
+              <table width="100%" cellpadding="0" cellspacing="0">
+                <tr>
+                  <td>
+                    <p style="margin:0;font-size:26px;font-weight:900;letter-spacing:4px;color:#ffffff;text-transform:uppercase;">FLEXI</p>
+                    <p style="margin:6px 0 0;font-size:10px;color:#E12E99;text-transform:uppercase;letter-spacing:3px;">Train Smarter · Move Better · Live Longer</p>
+                  </td>
+                  <td align="right">
+                    <span style="display:inline-block;background:#E12E99;color:#fff;font-size:10px;font-weight:700;text-transform:uppercase;letter-spacing:2px;padding:6px 14px;border-radius:50px;">Confirmed ✓</span>
+                  </td>
+                </tr>
               </table>
-            </div>
+            </td>
+          </tr>
 
-            <a href="https://wa.me/27676164204?text=Hi%20Omziey%2C%20I%20just%20applied%20on%20the%20Flexi%20website%20and%20want%20to%20start%20ASAP!"
-              style="display: inline-block; background: #25D366; color: #fff; text-decoration: none; font-weight: 700; font-size: 13px; text-transform: uppercase; letter-spacing: 1px; padding: 14px 28px; border-radius: 50px; margin-bottom: 32px;">
-              Chat on WhatsApp
-            </a>
+          <!-- Pink accent line -->
+          <tr>
+            <td style="height:4px;background:linear-gradient(90deg,#E12E99,#ff6ec7);"></td>
+          </tr>
 
-            <p style="font-size: 11px; color: #756C73; border-top: 1px solid rgba(25,20,23,0.06); padding-top: 20px; margin: 0;">
-              © 2025 Flexi Fitness · Designed by <a href="https://www.instagram.com/mbongrizzy_rsa/" style="color: #E12E99;">Mbongrizzy</a>
-            </p>
-          </div>
+          <!-- Main body -->
+          <tr>
+            <td style="background:#ffffff;padding:40px 40px 32px;">
+
+              <!-- Greeting -->
+              <p style="margin:0 0 6px;font-size:22px;font-weight:800;color:#191417;letter-spacing:-0.3px;">
+                Hey ${name} 👋
+              </p>
+              <p style="margin:0 0 28px;font-size:15px;color:#756C73;line-height:1.7;">
+                We've received your application and you're one step closer to your best self.
+                <strong style="color:#191417;">Omziey</strong> will personally review your goals and
+                reach out within <strong style="color:#E12E99;">24 hours</strong> to lock in your
+                free consultation.
+              </p>
+
+              <!-- Divider -->
+              <div style="height:1px;background:rgba(25,20,23,0.07);margin-bottom:28px;"></div>
+
+              <!-- Application summary card -->
+              <p style="margin:0 0 14px;font-size:10px;font-weight:700;text-transform:uppercase;letter-spacing:2.5px;color:#E12E99;">
+                Your Application
+              </p>
+              <table width="100%" cellpadding="0" cellspacing="0" style="background:#FAF5FA;border-radius:12px;border:1px solid rgba(25,20,23,0.07);overflow:hidden;">
+                <tr style="border-bottom:1px solid rgba(25,20,23,0.07);">
+                  <td style="padding:14px 20px;font-size:12px;color:#756C73;text-transform:uppercase;letter-spacing:1px;width:40%;">Name</td>
+                  <td style="padding:14px 20px;font-size:13px;font-weight:700;color:#191417;text-align:right;">${name}</td>
+                </tr>
+                <tr style="border-bottom:1px solid rgba(25,20,23,0.07);">
+                  <td style="padding:14px 20px;font-size:12px;color:#756C73;text-transform:uppercase;letter-spacing:1px;">Goal</td>
+                  <td style="padding:14px 20px;font-size:13px;font-weight:700;color:#E12E99;text-align:right;">${goal}</td>
+                </tr>
+                <tr style="border-bottom:1px solid rgba(25,20,23,0.07);">
+                  <td style="padding:14px 20px;font-size:12px;color:#756C73;text-transform:uppercase;letter-spacing:1px;">Phone</td>
+                  <td style="padding:14px 20px;font-size:13px;font-weight:600;color:#191417;text-align:right;">${phone || "—"}</td>
+                </tr>
+                <tr>
+                  <td style="padding:14px 20px;font-size:12px;color:#756C73;text-transform:uppercase;letter-spacing:1px;">Email</td>
+                  <td style="padding:14px 20px;font-size:13px;font-weight:600;color:#191417;text-align:right;">${email}</td>
+                </tr>
+              </table>
+
+              <!-- What happens next -->
+              <div style="margin:32px 0 28px;background:#FAF5FA;border-left:3px solid #E12E99;border-radius:0 10px 10px 0;padding:18px 20px;">
+                <p style="margin:0 0 8px;font-size:10px;font-weight:700;text-transform:uppercase;letter-spacing:2px;color:#E12E99;">What happens next?</p>
+                <p style="margin:4px 0;font-size:13px;color:#191417;line-height:1.7;">
+                  1 · Omziey reviews your goal profile<br/>
+                  2 · You get a personalised program outline<br/>
+                  3 · Free 30-min consultation call is scheduled
+                </p>
+              </div>
+
+              <!-- CTA buttons -->
+              <table cellpadding="0" cellspacing="0">
+                <tr>
+                  <td style="padding-right:12px;">
+                    <a href="https://wa.me/27676164204?text=Hi%20Omziey%2C%20I%20just%20applied%20on%20the%20Flexi%20website!%20My%20name%20is%20${encodeURIComponent(name)}%20and%20my%20goal%20is%20${encodeURIComponent(goal)}."
+                      style="display:inline-block;background:#E12E99;color:#ffffff;text-decoration:none;font-size:12px;font-weight:700;text-transform:uppercase;letter-spacing:1.5px;padding:14px 24px;border-radius:50px;">
+                      Message Omziey
+                    </a>
+                  </td>
+                  <td>
+                    <a href="https://remix-flexi.vercel.app"
+                      style="display:inline-block;background:transparent;color:#191417;text-decoration:none;font-size:12px;font-weight:700;text-transform:uppercase;letter-spacing:1.5px;padding:13px 24px;border-radius:50px;border:1.5px solid rgba(25,20,23,0.15);">
+                      View Programs
+                    </a>
+                  </td>
+                </tr>
+              </table>
+
+            </td>
+          </tr>
+
+          <!-- Footer -->
+          <tr>
+            <td style="background:#191417;border-radius:0 0 16px 16px;padding:24px 40px;">
+              <table width="100%" cellpadding="0" cellspacing="0">
+                <tr>
+                  <td>
+                    <p style="margin:0;font-size:11px;color:rgba(255,255,255,0.35);line-height:1.7;">
+                      © 2025 Flexi Fitness. All rights reserved.<br/>
+                      Designed by <a href="https://www.instagram.com/mbongrizzy_rsa/" style="color:#E12E99;text-decoration:none;">Mbongrizzy</a>
+                    </p>
+                  </td>
+                  <td align="right">
+                    <a href="https://www.instagram.com/omziey/" style="display:inline-block;margin-left:10px;">
+                      <span style="display:inline-block;width:30px;height:30px;border-radius:50%;border:1px solid rgba(255,255,255,0.15);text-align:center;line-height:30px;font-size:13px;color:rgba(255,255,255,0.4);">&#9679;</span>
+                    </a>
+                  </td>
+                </tr>
+              </table>
+            </td>
+          </tr>
+
+        </table>
+      </td>
+    </tr>
+  </table>
+
+</body>
+</html>
         `,
       }),
     });
