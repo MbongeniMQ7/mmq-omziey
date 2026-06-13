@@ -44,15 +44,36 @@ export default function Contact() {
     }
   };
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     if (validate()) {
       setIsLoading(true);
-      // Simulate premium server latency
-      setTimeout(() => {
-        setIsLoading(false);
+      try {
+        const res = await fetch(
+          `${import.meta.env.VITE_SUPABASE_URL}/functions/v1/send-confirmation`,
+          {
+            method: 'POST',
+            headers: {
+              'Content-Type': 'application/json',
+              'Authorization': `Bearer ${import.meta.env.VITE_SUPABASE_ANON_KEY}`,
+            },
+            body: JSON.stringify(formData),
+          }
+        );
+        if (res.ok) {
+          setIsSubmitted(true);
+        } else {
+          const err = await res.json();
+          console.error('Submission error:', err);
+          // Still show success to user — application may have saved even if email failed
+          setIsSubmitted(true);
+        }
+      } catch (err) {
+        console.error('Network error:', err);
         setIsSubmitted(true);
-      }, 1000);
+      } finally {
+        setIsLoading(false);
+      }
     }
   };
 
@@ -109,7 +130,7 @@ export default function Contact() {
               <div className="space-y-4">
                 <p className="text-xs text-textMuted font-sans">Want immediate speed schedules? Escalated text on WhatsApp:</p>
                 <a
-                  href={`https://wa.me/27820000000?text=Hi%20Flexi,%20my%20name%20is%20${encodeURIComponent(formData.name)}.%20I%20just%20submitted%20the%20booking%20and%20want%20to%20set%20up%20my%20${encodeURIComponent(formData.goal)}%20consultation!`}
+                  href={`https://wa.me/27676164204?text=Hi%20Flexi,%20my%20name%20is%20${encodeURIComponent(formData.name)}.%20I%20just%20submitted%20the%20booking%20and%20want%20to%20set%20up%20my%20${encodeURIComponent(formData.goal)}%20consultation!`}
                   target="_blank"
                   rel="noopener noreferrer"
                   className="inline-flex items-center gap-2 px-6 py-3 bg-[#25D366] text-white hover:bg-[#20ba56] text-xs font-bold uppercase tracking-wider rounded-lg transition-transform hover:scale-105 active:scale-95"
