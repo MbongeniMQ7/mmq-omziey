@@ -109,16 +109,10 @@ export default function App() {
         />
 
         {/* 3. About philosophy pillars with custom active-state dashboard */}
-        <About 
-          videoUrl={videoSettings.aboutVideoUrl} 
-          videoEnabled={videoSettings.enabled} 
-        />
+        <About />
 
         {/* 4. Path selection block with 3 program cards and detail drawers */}
-        <Programs 
-          videoUrl={videoSettings.programsVideoUrl} 
-          videoEnabled={videoSettings.enabled} 
-        />
+        <Programs />
 
         {/* 5. Coach introduction section with interactive initials and certifications */}
         <Trainers />

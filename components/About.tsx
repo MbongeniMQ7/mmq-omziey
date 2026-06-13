@@ -1,27 +1,9 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState } from 'react';
 import { Dumbbell, Apple, Brain, CheckCircle, Activity, Zap, TrendingUp } from 'lucide-react';
 import { motion } from 'motion/react';
 
-interface AboutProps {
-  videoUrl?: string;
-  videoEnabled?: boolean;
-}
-
-export default function About({ videoUrl, videoEnabled }: AboutProps = {}) {
+export default function About() {
   const [activeTab, setActiveTab ] = useState<'programming' | 'nutrition' | 'mindset'>('programming');
-  const [currentVideoSrc, setCurrentVideoSrc] = useState(videoUrl || '/back.mp4');
-
-  useEffect(() => {
-    if (videoUrl) {
-      setCurrentVideoSrc(videoUrl);
-    }
-  }, [videoUrl]);
-
-  const handleVideoError = () => {
-    if (currentVideoSrc === '/back.mp4') {
-      setCurrentVideoSrc('https://assets.mixkit.co/videos/preview/mixkit-healthy-woman-training-at-the-gym-on-an-exercise-bike-40014-large.mp4');
-    }
-  };
 
   const pillars = [
     {
@@ -72,20 +54,6 @@ export default function About({ videoUrl, videoEnabled }: AboutProps = {}) {
 
   return (
     <section id="about" className="py-24 md:py-32 bg-primary relative overflow-hidden border-b border-customBorder">
-      {/* Subtle video background webm/mp4 loop */}
-      {videoEnabled && currentVideoSrc && (
-        <video
-          key={currentVideoSrc}
-          autoPlay
-          loop
-          muted
-          playsInline
-          webkit-playsinline="true"
-          className="absolute inset-0 w-full h-full object-cover opacity-50 transition-all duration-1000 object-center pointer-events-none"
-          src={currentVideoSrc}
-          onError={handleVideoError}
-        />
-      )}
       {/* Background grids */}
       <div className="absolute inset-0 z-0 pointer-events-none opacity-5">
         <svg className="w-full h-full" xmlns="http://www.w3.org/2000/svg">

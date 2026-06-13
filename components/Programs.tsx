@@ -1,26 +1,8 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState } from 'react';
 import { Calendar, RefreshCw, ArrowRight, ShieldCheck } from 'lucide-react';
 
-interface ProgramsProps {
-  videoUrl?: string;
-  videoEnabled?: boolean;
-}
-
-export default function Programs({ videoUrl, videoEnabled }: ProgramsProps = {}) {
+export default function Programs() {
   const [expandedProgram, setExpandedProgram] = useState<number | null>(null);
-  const [currentVideoSrc, setCurrentVideoSrc] = useState(videoUrl || '/gym.mp4');
-
-  useEffect(() => {
-    if (videoUrl) {
-      setCurrentVideoSrc(videoUrl);
-    }
-  }, [videoUrl]);
-
-  const handleVideoError = () => {
-    if (currentVideoSrc === '/gym.mp4') {
-      setCurrentVideoSrc('https://assets.mixkit.co/videos/preview/mixkit-athletic-woman-doing-squats-with-a-barbell-in-the-gym-41710-large.mp4');
-    }
-  };
 
   const programsData = [
     {
@@ -84,21 +66,6 @@ export default function Programs({ videoUrl, videoEnabled }: ProgramsProps = {})
 
   return (
     <section id="programs" className="py-24 md:py-32 bg-primary relative border-b border-customBorder select-none">
-      {/* Subtle video background loop */}
-      {videoEnabled && currentVideoSrc && (
-        <video
-          key={currentVideoSrc}
-          autoPlay
-          loop
-          muted
-          playsInline
-          webkit-playsinline="true"
-          className="absolute inset-0 w-full h-full object-cover opacity-50 transition-all duration-1000 object-center pointer-events-none"
-          src={currentVideoSrc}
-          onError={handleVideoError}
-        />
-      )}
-      
       {/* Absolute Decorative elements */}
       <div className="absolute right-10 top-1/4 w-72 h-72 rounded-full bg-accent/5 filter blur-3xl pointer-events-none" />
       <div className="absolute left-10 bottom-1/4 w-72 h-72 rounded-full bg-accent/3 filter blur-3xl pointer-events-none" />
