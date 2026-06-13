@@ -1,144 +1,113 @@
 import React from 'react';
 import { Star, ArrowRight } from 'lucide-react';
 
-export default function Trainers() {
-  const trainersData = [
-    {
-      id: 1,
-      initials: 'AM',
-      name: 'Alex M.',
-      specialty: 'Strength & Conditioning',
-      experience: '7 Years',
-      rating: '4.9/5',
-      bio: 'Specialises in biomechanically sound compound building, structural strength gains, and neural load-adaptation systems.',
-      certifications: ['CSCS *D', 'USAW L2', 'FMS Certified']
-    },
-    {
-      id: 2,
-      initials: 'JL',
-      name: 'Jordan L.',
-      specialty: 'Sports Performance',
-      experience: '5 Years',
-      rating: '5.0/5',
-      bio: 'Focuses on power development indices, acceleration mechanics, and sports agility programming for competitive elite athletes.',
-      certifications: ['PES-NASM', 'EXOS performance', 'CF-L3']
-    },
-    {
-      id: 3,
-      initials: 'SK',
-      name: 'Sam K.',
-      specialty: 'Holistic Wellness',
-      experience: '6 Years',
-      rating: '4.8/5',
-      bio: 'Bridges stress integration, custom nutrition macros strategy, and habit longevity mechanisms for long-term health metrics.',
-      certifications: ['Precision Nutrition L2', 'PN Habit coach', 'CES']
-    }
-  ];
+const omziey = {
+  name: 'Omziey',
+  specialty: 'Personal Trainer & Coach',
+  experience: '8 Years',
+  rating: '5.0/5',
+  bio: 'Your transformation starts here. Omziey blends science-backed programming with real-world accountability to deliver results that actually stick — from strength gains to full lifestyle shifts.',
+  certifications: ['CSCS', 'Precision Nutrition L2', 'FMS Certified'],
+  instagram: 'https://www.instagram.com/omziey/',
+  // Replace with actual image path once provided, e.g. '/omziey.jpg'
+  image: null as string | null,
+};
 
+export default function Trainers() {
   return (
     <section id="trainers" className="py-24 md:py-32 bg-primary relative overflow-hidden border-b border-customBorder select-none">
-      
-      {/* Visual back accents */}
-      <div className="absolute left-[10%] top-[40%] w-[50vw] h-[50vh] bg-accent/2 rounded-full blur-[160px] pointer-events-none" />
+      <div className="absolute left-[10%] top-[40%] w-[50vw] h-[50vh] bg-accent/5 rounded-full blur-[160px] pointer-events-none" />
 
-      <div className="max-w-7xl mx-auto px-6 md:px-12 relative z-10">
-        
+      <div className="max-w-5xl mx-auto px-6 md:px-12 relative z-10">
+
         {/* Section Header */}
         <div className="text-center mb-16">
-          <span className="text-xs font-bold tracking-widest text-accent uppercase block mb-3">Guiding Force</span>
-          <h2 id="trainers-heading" className="text-4xl sm:text-5xl md:text-6xl font-display font-black text-textPrimary uppercase leading-none">
-            YOUR COACHES
+          <span className="text-xs font-bold tracking-widest text-accent uppercase block mb-3">Your Guide</span>
+          <h2 className="text-4xl sm:text-5xl md:text-6xl font-display font-bold text-textPrimary uppercase leading-none">
+            MEET YOUR COACH
           </h2>
           <p className="text-textMuted max-w-lg mt-4 text-sm sm:text-base mx-auto">
-            No dynamic influencers typing workouts on their couch. Your coaches are active, accredited biomechanics partners committed to actual data returns.
+            One coach. Full dedication. Real results.
           </p>
         </div>
 
-        {/* Trainers Container: Horizontal Scroll on Mobile, Grid on Desktop */}
-        <div
-          id="trainers-container"
-          className="flex overflow-x-auto md:grid md:grid-cols-3 gap-6 snap-x snap-mandatory no-scrollbar pb-6 md:pb-0"
-        >
-          {trainersData.map((trainer) => (
-            <div
-              key={trainer.id}
-              className="min-w-[85vw] sm:min-w-[50vw] md:min-w-0 snap-center bg-white border border-customBorder rounded-2xl p-6 md:p-8 flex flex-col justify-between shadow-sm hover:shadow-md transition-all duration-300 hover:border-accent/30 hover:scale-[1.02] group"
-            >
-              <div>
-                {/* Avatar area: Glowing Initials placeholder */}
-                <div className="flex items-center justify-between mb-6">
-                  <div className="w-20 h-20 rounded-full bg-primary border-2 border-customBorder group-hover:border-accent/40 flex items-center justify-center relative shadow-inner transition-colors duration-300 overflow-hidden">
-                    <div className="absolute inset-1 rounded-full bg-accent/5 flex items-center justify-center">
-                      <span className="text-3xl font-display font-extrabold text-accent tracking-wider transition-colors">
-                        {trainer.initials}
-                      </span>
-                    </div>
-                    {/* Glowing outer animation accent */}
-                    <div className="absolute -inset-1 rounded-full bg-gradient-to-tr from-accent/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 animate-pulse"></div>
-                  </div>
+        {/* Single Trainer Card */}
+        <div className="flex flex-col md:flex-row items-center gap-12 bg-white border border-customBorder rounded-3xl p-8 md:p-12 shadow-md hover:shadow-xl transition-all duration-300 hover:border-accent/30 group">
 
-                  <div className="text-right">
-                    <span className="block text-xs font-mono text-textMuted uppercase">EXPERIENCE</span>
-                    <span className="text-lg font-display font-bold text-accent">{trainer.experience}</span>
-                  </div>
+          {/* Avatar */}
+          <div className="flex-shrink-0">
+            <div className="w-48 h-48 md:w-64 md:h-64 rounded-2xl overflow-hidden border-2 border-customBorder group-hover:border-accent/40 transition-colors relative shadow-lg">
+              {omziey.image ? (
+                <img src={omziey.image} alt={omziey.name} className="w-full h-full object-cover object-top" />
+              ) : (
+                <div className="w-full h-full bg-accent/10 flex flex-col items-center justify-center">
+                  <span className="text-6xl font-display font-bold text-accent">OZ</span>
+                  <span className="text-xs font-mono text-accent/60 uppercase mt-2 tracking-widest">Photo coming soon</span>
                 </div>
-
-                {/* Trainer Info */}
-                <h3 className="text-2xl font-display font-extrabold text-textPrimary uppercase tracking-wide mb-1">
-                  {trainer.name}
-                </h3>
-                
-                {/* Specialty */}
-                <p className="text-xs font-mono font-medium tracking-wider text-accent uppercase mb-4">
-                  {trainer.specialty}
-                </p>
-
-                {/* Divider */}
-                <div className="h-[1px] w-full bg-customBorder mb-4" />
-
-                {/* Bio text */}
-                <p className="text-sm text-textMuted leading-relaxed mb-6 font-sans">
-                  {trainer.bio}
-                </p>
-
-                {/* Certifications tags */}
-                <div className="flex flex-wrap gap-1.5 mb-8">
-                  {trainer.certifications.map((cert) => (
-                    <span
-                      key={cert}
-                      className="text-[9px] font-mono uppercase bg-primary border border-customBorder text-textPrimary px-2 py-1 rounded"
-                    >
-                      {cert}
-                    </span>
-                  ))}
-                </div>
-              </div>
-
-              {/* Bottom CTAs inside each trainer card */}
-              <div className="mt-auto pt-4 border-t border-customBorder flex items-center justify-between">
-                <span className="flex items-center gap-1 text-xs text-textPrimary font-mono">
-                  <Star className="w-3.5 h-3.5 fill-accent text-accent" />
-                  {trainer.rating} Rating
-                </span>
-
-                <a
-                  href="#contact"
-                  className="p-2 border border-customBorder rounded-full group-hover:bg-accent group-hover:border-accent text-textPrimary group-hover:text-white transition-all duration-300 transform group-hover:rotate-45"
-                  aria-label={`Inquire directly with coach ${trainer.name}`}
-                >
-                  <ArrowRight className="w-4 h-4" />
-                </a>
-              </div>
-
+              )}
+              {/* Glow ring on hover */}
+              <div className="absolute inset-0 rounded-2xl ring-0 group-hover:ring-2 group-hover:ring-accent/30 transition-all duration-300" />
             </div>
-          ))}
-        </div>
+          </div>
 
-        {/* Mobile slide swipe helper indicator */}
-        <div className="flex md:hidden justify-center gap-1.5 mt-4">
-          <span className="w-5 h-1.5 rounded-full bg-accent"></span>
-          <span className="w-1.5 h-1.5 rounded-full bg-primary-border border border-customBorder"></span>
-          <span className="w-1.5 h-1.5 rounded-full bg-primary-border border border-customBorder"></span>
+          {/* Info */}
+          <div className="flex-1 text-center md:text-left">
+            <div className="flex items-center justify-center md:justify-start gap-3 mb-2">
+              <h3 className="text-4xl md:text-5xl font-display font-bold text-textPrimary uppercase tracking-wide">
+                {omziey.name}
+              </h3>
+              <span className="flex items-center gap-1 text-xs text-white font-mono bg-accent px-2.5 py-1 rounded-full">
+                <Star className="w-3 h-3 fill-white" />
+                {omziey.rating}
+              </span>
+            </div>
+
+            <p className="text-sm font-mono font-semibold tracking-widest text-accent uppercase mb-1">
+              {omziey.specialty}
+            </p>
+            <p className="text-xs text-textMuted font-mono uppercase tracking-wider mb-6">
+              {omziey.experience} Experience
+            </p>
+
+            <div className="h-px w-full bg-customBorder mb-6" />
+
+            <p className="text-base text-textMuted leading-relaxed mb-6 font-sans max-w-xl mx-auto md:mx-0">
+              {omziey.bio}
+            </p>
+
+            {/* Certifications */}
+            <div className="flex flex-wrap gap-2 justify-center md:justify-start mb-8">
+              {omziey.certifications.map((cert) => (
+                <span key={cert} className="text-[10px] font-mono uppercase bg-primary border border-customBorder text-textPrimary px-3 py-1.5 rounded-full">
+                  {cert}
+                </span>
+              ))}
+            </div>
+
+            {/* CTAs */}
+            <div className="flex items-center gap-4 justify-center md:justify-start">
+              <a
+                href="#contact"
+                className="inline-flex items-center gap-2 px-6 py-3 bg-accent text-white text-sm font-bold tracking-wider uppercase rounded-full hover:bg-accent/90 hover:scale-105 active:scale-95 transition-all shadow-lg shadow-accent/20"
+              >
+                Book a Session
+                <ArrowRight className="w-4 h-4" />
+              </a>
+              <a
+                href={omziey.instagram}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="w-11 h-11 rounded-full border border-customBorder flex items-center justify-center text-textMuted hover:text-accent hover:border-accent/40 transition-all hover:scale-105"
+                aria-label="Follow Omziey on Instagram"
+              >
+                <svg className="w-5 h-5 fill-none stroke-current" viewBox="0 0 24 24" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                  <rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect>
+                  <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path>
+                  <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line>
+                </svg>
+              </a>
+            </div>
+          </div>
         </div>
 
       </div>

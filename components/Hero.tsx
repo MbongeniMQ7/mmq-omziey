@@ -105,7 +105,7 @@ export default function Hero({ onNavClick, videoUrl, videoEnabled, videoOpacity 
             initial={{ opacity: 0, y: 15 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
-            className="inline-flex items-center gap-2 bg-accent/10 border border-accent/20 px-4 py-1.5 rounded-full text-accent text-xs font-bold tracking-widest uppercase mb-8"
+            className="inline-flex items-center gap-2 bg-white/15 border border-white/30 backdrop-blur-sm px-4 py-1.5 rounded-full text-white text-xs font-bold tracking-widest uppercase mb-8"
           >
             <span className="w-2 h-2 rounded-full bg-accent animate-ping"></span>
             TRAIN SMARTER. MOVE BETTER. LIVE LONGER.
@@ -117,11 +117,12 @@ export default function Hero({ onNavClick, videoUrl, videoEnabled, videoOpacity 
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.1 }}
-            className="text-6xl sm:text-7xl md:text-8xl lg:text-90px xl:text-[96px] font-display font-extrabold text-textPrimary leading-[0.9] uppercase tracking-wider select-none mb-6"
+            className="text-6xl sm:text-7xl md:text-8xl lg:text-[96px] xl:text-[110px] font-display font-bold text-white leading-[1.0] uppercase tracking-wide select-none mb-6"
+            style={{ textShadow: '0 4px 24px rgba(0,0,0,0.6), 0 1px 4px rgba(0,0,0,0.8)' }}
           >
             YOUR BODY.
             <br />
-            <span className="text-transparent bg-clip-text bg-gradient-to-r from-accent via-accent/95 to-textPrimary pink-text-glow">
+            <span className="text-accent" style={{ textShadow: '0 2px 16px rgba(225,46,153,0.5)' }}>
               YOUR RULES.
             </span>
             <br />
@@ -134,7 +135,8 @@ export default function Hero({ onNavClick, videoUrl, videoEnabled, videoOpacity 
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.2 }}
-            className="text-base sm:text-lg md:text-xl text-textMuted max-w-xl mx-auto font-sans leading-relaxed mb-10"
+            className="text-base sm:text-lg md:text-xl text-white/90 max-w-xl mx-auto font-sans leading-relaxed mb-10"
+            style={{ textShadow: '0 2px 12px rgba(0,0,0,0.7)' }}
           >
             Flexi pairs expert coaching with smart programming to build the body and habits that last — not just the 12-week sprint.
           </motion.p>
@@ -158,7 +160,7 @@ export default function Hero({ onNavClick, videoUrl, videoEnabled, videoOpacity 
               id="hero-cta-programs"
               href="#programs"
               onClick={(e) => handleScrollClick(e, 'programs')}
-              className="w-full sm:w-auto px-8 py-4 border border-textPrimary/20 text-textPrimary text-sm font-bold tracking-wider uppercase rounded-full hover:bg-accent/5 hover:border-accent transition-all text-center"
+              className="w-full sm:w-auto px-8 py-4 border border-white/50 text-white text-sm font-bold tracking-wider uppercase rounded-full hover:bg-white/10 hover:border-white transition-all text-center backdrop-blur-sm"
             >
               See Programs
             </a>
@@ -171,7 +173,7 @@ export default function Hero({ onNavClick, videoUrl, videoEnabled, videoOpacity 
         <a
           href="#about"
           onClick={(e) => handleScrollClick(e, 'about')}
-          className="text-textMuted hover:text-accent flex flex-col items-center gap-1 text-[10px] uppercase font-bold tracking-widest transition-colors duration-200"
+          className="text-white/70 hover:text-white flex flex-col items-center gap-1 text-[10px] uppercase font-bold tracking-widest transition-colors duration-200"
         >
           Scroll to Explore
           <ChevronDown className="w-4 h-4 animate-bounce mt-1" />
