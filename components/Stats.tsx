@@ -66,31 +66,31 @@ function CountUp({ target, suffix = '', decimals = 0 }: CountUpProp) {
 export default function Stats() {
   const statsList = [
     {
-      targetNum: 500,
+      targetNum: 8,
       suffix: '+',
       label: 'Clients Trained',
-      sublabel: 'Custom athletic blocks',
+      sublabel: 'Real results, real people',
       decimals: 0
     },
     {
       targetNum: 4.9,
       suffix: ' / 5',
       label: 'Avg Rating',
-      sublabel: 'Acreddited verified feedback',
+      sublabel: 'Verified client feedback',
       decimals: 1
     },
     {
-      targetNum: 8,
+      targetNum: 2,
       suffix: ' Years',
       label: 'Active Coaching',
       sublabel: 'Science-backed results',
       decimals: 0
     },
     {
-      targetNum: 3,
-      suffix: ' Locations',
-      label: 'Boutique Hubs',
-      sublabel: 'Elite training spaces',
+      targetNum: 1,
+      suffix: ' Location',
+      label: 'Boutique Hub',
+      sublabel: 'Elite training space',
       decimals: 0
     }
   ];

@@ -68,22 +68,6 @@ export default function Trainers() {
               {omziey.experience} Active Coaching
             </p>
 
-            {/* Quick Stats */}
-            <div className="flex flex-wrap gap-4 justify-center md:justify-start mb-6">
-              <div className="flex flex-col items-center md:items-start bg-white border border-customBorder rounded-xl px-5 py-3">
-                <span className="text-2xl font-display font-bold text-accent">8+</span>
-                <span className="text-[10px] font-mono uppercase text-textMuted tracking-wider">Clients</span>
-              </div>
-              <div className="flex flex-col items-center md:items-start bg-white border border-customBorder rounded-xl px-5 py-3">
-                <span className="text-2xl font-display font-bold text-accent">2</span>
-                <span className="text-[10px] font-mono uppercase text-textMuted tracking-wider">Years Coaching</span>
-              </div>
-              <div className="flex flex-col items-center md:items-start bg-white border border-customBorder rounded-xl px-5 py-3">
-                <span className="text-2xl font-display font-bold text-accent">1</span>
-                <span className="text-[10px] font-mono uppercase text-textMuted tracking-wider">Location</span>
-              </div>
-            </div>
-
             <div className="h-px w-full bg-customBorder mb-6" />
 
             <p className="text-base text-textMuted leading-relaxed mb-6 font-sans max-w-xl mx-auto md:mx-0">
