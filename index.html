@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Flexi - Train Smarter, Move Better, Live Longer</title>
+    <meta name="description" content="Flexi - Premium personal training and athletic fitness coaching" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              primary: '#FAF5FA',
+              accent: '#E12E99',
+              surface: '#FFFFFF',
+              textPrimary: '#191417',
+              textMuted: '#756C73',
+              customBorder: 'rgba(25,20,23,0.08)'
+            },
+            fontFamily: {
+              sans: ['"DM Sans"', 'sans-serif'],
+              display: ['"Bebas Neue"', 'sans-serif'],
+            }
+          }
+        }
+      }
+    </script>
+    <style>
+      @import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&display=swap');
+      
+      html {
+        scroll-behavior: smooth;
+        scroll-padding-top: 85px; /* Offset for fixed navbar */
+        background-color: #FAF5FA;
+      }
+
+      body {
+        font-family: 'DM Sans', sans-serif;
+        background-color: #FAF5FA;
+        color: #191417;
+        overflow-x: hidden;
+      }
+      
+      h1, h2, h3, h4, .font-display {
+        font-family: 'Bebas Neue', sans-serif;
+        letter-spacing: 0.05em;
+      }
+
+      /* Hide scrollbar for clean aesthetic */
+      .no-scrollbar::-webkit-scrollbar {
+        display: none;
+      }
+      .no-scrollbar {
+        -ms-overflow-style: none;
+        scrollbar-width: none;
+      }
+
+      /* Pink highlights & custom outlines */
+      .pink-border-glow {
+        border-color: rgba(225, 46, 153, 0.2);
+        box-shadow: 0 0 15px rgba(225, 46, 153, 0.05);
+      }
+      .pink-text-glow {
+        text-shadow: 0 0 10px rgba(225, 46, 153, 0.15);
+      }
+
+      /* Custom scrollbar styling */
+      ::-webkit-scrollbar {
+        width: 8px;
+        height: 8px;
+      }
+      ::-webkit-scrollbar-track {
+        background: #FAF5FA;
+      }
+      ::-webkit-scrollbar-thumb {
+        background: #E8DFE8;
+        border-radius: 4px;
+      }
+      ::-webkit-scrollbar-thumb:hover {
+        background: #E12E99;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="root"></div>
+    <script type="module" src="/index.tsx"></script>
+  </body>
+</html>

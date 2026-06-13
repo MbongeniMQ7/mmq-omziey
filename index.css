@@ -1,0 +1,13 @@
+@import "tailwindcss";
+
+@theme {
+  --color-primary: #FAF5FA;
+  --color-accent: #E12E99;
+  --color-surface: #FFFFFF;
+  --color-text-primary: #191417;
+  --color-text-muted: #756C73;
+  --color-custom-border: rgba(25,20,23,0.08);
+  
+  --font-sans: "DM Sans", sans-serif;
+  --font-display: "Bebas Neue", sans-serif;
+}

@@ -1,0 +1,8 @@
+{
+  "name": "Remix: Flexi",
+  "description": "Premium Personal Training \u0026 Fitness Coaching",
+  "requestFramePermissions": [],
+  "majorCapabilities": [
+    "MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"
+  ]
+}
