@@ -116,6 +116,14 @@ export default function Footer({ onNavClick }: FooterProps) {
             <span className="text-[10px] text-textMuted/45 font-sans block mt-1 hover:text-accent transition-colors">
               Built for people who are serious about change.
             </span>
+            <a
+              href="https://www.instagram.com/mbongrizzy_rsa/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-[10px] font-sans block mt-1 text-textMuted/50 hover:text-accent transition-colors"
+            >
+              Designed by Mbongrizzy
+            </a>
           </div>
 
           {/* Up arrow indicator */}

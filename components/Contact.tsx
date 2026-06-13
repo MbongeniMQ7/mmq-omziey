@@ -280,7 +280,7 @@ export default function Contact() {
 
           <a
             id="support-nav-wa"
-            href="https://wa.me/27820000000"
+            href="https://wa.me/27676164204"
             target="_blank"
             rel="noopener noreferrer"
             className="flex items-center gap-2.5 text-textMuted hover:text-accent transition-colors font-sans"
