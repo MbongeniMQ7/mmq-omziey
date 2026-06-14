@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Mail, Phone, MessageSquare, Check, AlertCircle, ArrowRight } from 'lucide-react';
+import { Mail, Phone, MessageSquare, Check, AlertCircle, ArrowRight, Download } from 'lucide-react';
 
 export default function Contact() {
   const [formData, setFormData] = useState({
@@ -290,11 +290,11 @@ export default function Contact() {
         <div className="mt-12 flex flex-col sm:flex-row justify-center items-center gap-8 text-sm">
           <a
             id="support-nav-email"
-            href="mailto:coaching@flexi.fit"
+            href="mailto:lemozineomolemo138@gmail.com"
             className="flex items-center gap-2.5 text-textMuted hover:text-accent transition-colors font-sans"
           >
             <Mail className="w-4 h-4 text-accent" />
-            coaching@flexi.fit
+            lemozineomolemo138@gmail.com
           </a>
           
           <span className="hidden sm:inline text-customBorder">|</span>
@@ -308,6 +308,18 @@ export default function Contact() {
           >
             <Phone className="w-4 h-4 text-accent" />
             WhatsApp Chat Support
+          </a>
+
+          <span className="hidden sm:inline text-customBorder">|</span>
+
+          <a
+            id="support-nav-brochure"
+            href="/Flexi_Brochure_Book_v3.pdf"
+            download="Flexi_Brochure.pdf"
+            className="flex items-center gap-2.5 text-textMuted hover:text-accent transition-colors font-sans"
+          >
+            <Download className="w-4 h-4 text-accent" />
+            Download Brochure
           </a>
         </div>
 
