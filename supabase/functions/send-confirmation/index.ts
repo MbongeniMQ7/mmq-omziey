@@ -113,7 +113,7 @@ Deno.serve(async (req) => {
               </p>
               <p style="margin:0 0 28px;font-size:15px;color:#756C73;line-height:1.7;">
                 We've received your application and you're one step closer to your best self.
-                <strong style="color:#191417;">Omziey</strong> will personally review your goals and
+                <strong style="color:#191417;">Omolemo</strong> will personally review your goals and
                 reach out within <strong style="color:#E12E99;">24 hours</strong> to lock in your
                 free consultation.
               </p>
@@ -148,7 +148,7 @@ Deno.serve(async (req) => {
               <div style="margin:32px 0 28px;background:#FAF5FA;border-left:3px solid #E12E99;border-radius:0 10px 10px 0;padding:18px 20px;">
                 <p style="margin:0 0 8px;font-size:10px;font-weight:700;text-transform:uppercase;letter-spacing:2px;color:#E12E99;">What happens next?</p>
                 <p style="margin:4px 0;font-size:13px;color:#191417;line-height:1.7;">
-                  1 · Omziey reviews your goal profile<br/>
+                  1 · Omolemo reviews your goal profile<br/>
                   2 · You get a personalised program outline<br/>
                   3 · Free 30-min consultation call is scheduled
                 </p>
@@ -158,7 +158,7 @@ Deno.serve(async (req) => {
               <table cellpadding="0" cellspacing="0">
                 <tr>
                   <td style="padding-right:12px;">
-                    <a href="https://wa.me/27676164204?text=Hi%20Omziey%2C%20I%20just%20applied%20on%20the%20Flexi%20website!%20My%20name%20is%20${encodeURIComponent(name)}%20and%20my%20goal%20is%20${encodeURIComponent(goal)}."
+                    <a href="https://wa.me/27676164204?text=Hi%20Omolemo%2C%20I%20just%20applied%20on%20the%20Flexi%20website!%20My%20name%20is%20${encodeURIComponent(name)}%20and%20my%20goal%20is%20${encodeURIComponent(goal)}."
                       style="display:inline-block;background:#E12E99;color:#ffffff;text-decoration:none;font-size:12px;font-weight:700;text-transform:uppercase;letter-spacing:1.5px;padding:14px 24px;border-radius:50px;">
                       Message Omziey
                     </a>

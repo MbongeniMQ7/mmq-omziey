@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { motion } from 'motion/react';
-import { ChevronDown } from 'lucide-react';
+import { ChevronDown, Download } from 'lucide-react';
 
 interface HeroProps {
   onNavClick: (id: string) => void;
@@ -163,6 +163,15 @@ export default function Hero({ onNavClick, videoUrl, videoEnabled, videoOpacity 
               className="w-full sm:w-auto px-8 py-4 border border-white/50 text-white text-sm font-bold tracking-wider uppercase rounded-full hover:bg-white/10 hover:border-white transition-all text-center backdrop-blur-sm"
             >
               See Programs
+            </a>
+            <a
+              id="hero-cta-brochure"
+              href="/Flexi_Brochure_Book_v3.pdf"
+              download="Flexi_Brochure.pdf"
+              className="w-full sm:w-auto px-8 py-4 border border-white/50 text-white text-sm font-bold tracking-wider uppercase rounded-full hover:bg-white/10 hover:border-white transition-all text-center backdrop-blur-sm flex items-center justify-center gap-2"
+            >
+              <Download className="w-4 h-4" />
+              Download Brochure
             </a>
           </motion.div>
         </div>

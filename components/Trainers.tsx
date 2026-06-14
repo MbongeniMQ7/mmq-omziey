@@ -2,11 +2,11 @@ import React from 'react';
 import { Star, ArrowRight } from 'lucide-react';
 
 const omziey = {
-  name: 'Omziey',
+  name: 'Omolemo',
   specialty: 'Personal Trainer & Coach',
   experience: '2 Years',
   rating: '5.0/5',
-  bio: 'Your transformation starts here. Omziey blends science-backed programming with real-world accountability to deliver results that actually stick — from strength gains to full lifestyle shifts.',
+  bio: 'Your transformation starts here. Omolemo blends science-backed programming with real-world accountability to deliver results that actually stick — from strength gains to full lifestyle shifts.',
   certifications: ['CSCS', 'Precision Nutrition L2', 'FMS Certified'],
   instagram: 'https://www.instagram.com/omziey/',
   image: '/omziey.jpeg' as string | null,
@@ -97,7 +97,7 @@ export default function Trainers() {
                 target="_blank"
                 rel="noopener noreferrer"
                 className="w-11 h-11 rounded-full border border-customBorder flex items-center justify-center text-textMuted hover:text-accent hover:border-accent/40 transition-all hover:scale-105"
-                aria-label="Follow Omziey on Instagram"
+                aria-label="Follow Omolemo on Instagram"
               >
                 <svg className="w-5 h-5 fill-none stroke-current" viewBox="0 0 24 24" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
                   <rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect>
